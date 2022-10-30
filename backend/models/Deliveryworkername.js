@@ -1,0 +1,84 @@
+const mongoose=require('mongoose');
+const {Schema} =mongoose;
+
+const DeliveryworkerSchema=new Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:Number,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    nooforders:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    amountofwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    nooforganicwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    amountoforganicwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    noofhazardouswaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    amountofhazardouswaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    noofsolidwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    amountofsolidwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    noofliquidwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    amountofliquidwaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    noofrecyclablewaste:{
+        type:Number,
+        default:0,
+        required:false
+    },
+    amountofrecyclablewaste:{
+        type:Number,
+        default:0,
+        required:false
+    }
+
+
+})
+module.exports=mongoose.model('Deliveryworkername',DeliveryworkerSchema);
